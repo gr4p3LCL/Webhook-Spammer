@@ -78,6 +78,6 @@ fn banner() {
 ██║  ██║██║   ██║██║     ██╔═══╝ ██╔══██║██║██║╚██╗██║
 ██████╔╝╚██████╔╝███████╗██║     ██║  ██║██║██║ ╚████║
 ╚═════╝  ╚═════╝ ╚══════╝╚═╝     ╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝"#;
-    let dis = "Copyright (C) 2021 Pikkel/tty3\nThis program comes with ABSOLUTELY NO WARRANTY.\nThis is free software, and you are welcome to redistribute it under certain conditions;\nSee https://github.com/Pikkel/Cerebellum/blob/main/LICENSE for full details.";
+    let dis = "Copyright (C) 2021 Pikkel/tty3\nThis program comes with ABSOLUTELY NO WARRANTY.\nThis is free software, and you are welcome to redistribute it under certain conditions;\nSee https://github.com/Pikkel/Dolphin/blob/main/LICENSE for full details.";
     println!("{}\n{}\n", swag.gradient(Color::Blue).bold(), dis.bold());
 }
