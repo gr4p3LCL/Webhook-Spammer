@@ -1,6 +1,7 @@
 use colorful::*;
 use std::collections::HashMap;
 use std::io;
+use std::{thread, time::Duration};
 use webbrowser;
 
 #[tokio::main]
@@ -15,6 +16,7 @@ async fn main() {
     let mut pfp = String::new();
     let mut input = String::new();
     let mut times = String::new();
+    let mut delay = String::new();
     let hooksend = 0;
     let hookrem = 1;
 
@@ -33,6 +35,11 @@ async fn main() {
             .read_line(&mut times)
             .expect("I'm gonna say the nword");
         let timeint: i32 =  times.trim().parse::<i32>().expect("I'm gonna say the nword");
+        println!("\nDelay:");
+        io::stdin()
+            .read_line(&mut delay)
+            .expect("I'm gonna say the nword");
+        let delayint: u64 =  delay.trim().parse::<u64>().expect("I'm gonna say the nword");
         println!("\nName:");
         io::stdin()
             .read_line(&mut name)
@@ -57,6 +64,7 @@ async fn main() {
         for i in 0..timeint {
             println!("Sending: {}", i);
             client.post(&webhook).json(&map).send().await;
+            thread::sleep(Duration::from_millis(delayint));
         }
         println!("\nFinished")
     } else if n == 1 {
