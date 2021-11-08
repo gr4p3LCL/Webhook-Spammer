@@ -51,7 +51,7 @@ async fn main() {
         for i in 0..timeint {
             println!("Sending: {}", i);
             client.post(&webhook).json(&json).send().await;
-            thread::sleep(Duration::from_millis(delayint));
+            thread::sleep(Duration::from_secs(delayint));
         }
         println!("\nFinished")
     } else if n == 1 {
