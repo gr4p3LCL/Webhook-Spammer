@@ -11,6 +11,7 @@ git clone https://github.com/Pikkel/Dolphin.git
 cd Dolphin
 cargo run
 ```
+Also make sure to enter `makeconfig` before spamming
 
 <br>
 
