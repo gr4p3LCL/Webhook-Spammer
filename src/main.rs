@@ -49,7 +49,6 @@ fn main() {
                 motd::main();
             }
             "help" => { help::help(); }
-            "nuke" => { nuker::bot::main(); }
             "exit" => { break; }
             "x" => { break; }
 
