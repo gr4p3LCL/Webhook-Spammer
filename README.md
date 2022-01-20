@@ -1,9 +1,10 @@
 # Dolphin
 
 ~~Currently just a webhook spammer but I'll keep adding more~~<br>
-No reason to keep this version private so I'm replacing the public one with this :^)<br>
+~~No reason to keep this version private so I'm replacing the public one with this :^)<br>
 I realized that I should focus on bigger and better projects and let shit like this rot<br>
-I feel like this project is semi-decent quality so there's no reason to change it
+I feel like this project is semi-decent quality so there's no reason to change it~~
+Thinking about maybe making improvements
 ## Installation and usage
 
 ```
