@@ -38,7 +38,7 @@ pub async fn main() {
 
     let client = reqwest::Client::new();
 
-    println!("\n");
+    println!("");
     for i in 0..timeint {
         println!("Sending: {}", i);
         client.post(&webhook).json(&json).send().await;
