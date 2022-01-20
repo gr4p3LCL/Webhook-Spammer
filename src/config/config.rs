@@ -22,5 +22,5 @@ pub fn printconfig() {
     let mut file = std::fs::File::open("hookconfig.json").unwrap();
     let mut contents = String::new();
     file.read_to_string(&mut contents).unwrap();
-    print!("{}\n", contents);
+    println!("{}", contents);
 }
