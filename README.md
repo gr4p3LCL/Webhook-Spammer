@@ -1,4 +1,5 @@
 # Dolphin
+[![Rust](https://github.com/Pikkel/Dolphin/actions/workflows/rust.yml/badge.svg)](https://github.com/Pikkel/Dolphin/actions/workflows/rust.yml)
 
 ~~Currently just a webhook spammer but I'll keep adding more~~<br>
 ~~No reason to keep this version private so I'm replacing the public one with this :^)<br>
