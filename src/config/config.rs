@@ -1,5 +1,4 @@
-use std::io::Read;
-use std::io::Write;
+use std::io::{Read, Write};
 
 pub fn makeconfig() {
     let mut file = std::fs::File::create("hookconfig.json").expect("failed to create");
