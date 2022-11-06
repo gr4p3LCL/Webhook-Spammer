@@ -1,19 +1,19 @@
+pub mod config;
 mod misc;
 mod webhook;
-pub mod config;
 
 use colored::*;
 use config::config as conf;
-use misc::banner as banner;
-use misc::clear as clear;
-use misc::help as help;
-use misc::motd as motd;
+use misc::banner;
+use misc::clear;
+use misc::help;
+use misc::motd;
 use std::io::Write;
 use std::thread;
-use webhook::hookcheck as hookcheck;
-use webhook::hookdelete as hookdelete;
-use webhook::hookfile as hookfile;
-use webhook::hookspam as hookspam;
+use webhook::hookcheck;
+use webhook::hookdelete;
+use webhook::hookfile;
+use webhook::hookspam;
 
 fn prompt(name: &str) -> String {
     let mut line = String::new();
@@ -33,13 +33,27 @@ fn main() {
     loop {
         let input = prompt("┌[DOLPHIN]\n└──╼$ ");
         match input.as_str() {
-            "printconfig" => { conf::printconfig(); }
-            "makeconfig" => { conf::makeconfig(); }
-            "hookspam" => { hookspam::main(); }
-            "hookdelete" => { hookdelete::main(); }
-            "hookfile" => { hookfile::file(); }
-            "check" => { hookcheck::browser(); }
-            "clear" => { clear::main(); }
+            "printconfig" => {
+                conf::printconfig();
+            }
+            "makeconfig" => {
+                conf::makeconfig();
+            }
+            "hookspam" => {
+                hookspam::main();
+            }
+            "hookdelete" => {
+                hookdelete::main();
+            }
+            "hookfile" => {
+                hookfile::file();
+            }
+            "check" => {
+                hookcheck::browser();
+            }
+            "clear" => {
+                clear::main();
+            }
             "banner" => {
                 banner::main();
                 motd::main();
@@ -48,11 +62,17 @@ fn main() {
                 banner::main();
                 motd::main();
             }
-            "help" => { help::help(); }
-            "exit" => { break; }
-            "x" => { break; }
+            "help" => {
+                help::help();
+            }
+            "exit" => {
+                break;
+            }
+            "x" => {
+                break;
+            }
 
-            _ => println!("that's not a command idiot, type `help` for a list commands")
+            _ => println!("that's not a command idiot, type `help` for a list commands"),
         }
     }
 }

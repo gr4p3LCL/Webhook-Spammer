@@ -1,6 +1,8 @@
 use std::fs::File;
 use std::io;
 use std::{thread, time::Duration};
+use hyper::http;
+use reqwest::StatusCode;
 
 #[tokio::main]
 #[allow(unused_must_use)]
@@ -40,8 +42,16 @@ pub async fn main() {
 
     println!();
     for i in 0..timeint {
-        println!("Sending: {}", i);
-        client.post(&webhook).json(&json).send().await;
+        print!("Sending: {} | ", i);
+        let resu = client.post(&webhook).json(&json).send().await.expect("send");
+        match resu.status() {
+            reqwest::StatusCode::NO_CONTENT => {
+                println!("Success");
+            },
+            _ => {
+                println!("Ratelimited");
+            },
+        };
         thread::sleep(Duration::from_millis(delayint));
     }
     println!("\nFinished")
