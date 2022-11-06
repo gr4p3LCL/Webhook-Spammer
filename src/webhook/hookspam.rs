@@ -48,8 +48,14 @@ pub async fn main() {
             reqwest::StatusCode::NO_CONTENT => {
                 println!("Success");
             },
-            _ => {
+            reqwest::StatusCode::TOO_MANY_REQUESTS => {
                 println!("Ratelimited");
+            },
+            reqwest::StatusCode::NOT_FOUND => {
+                panic!("Webhook Gone");
+            },
+            _ => {
+                println!("something wrong");
             },
         };
         thread::sleep(Duration::from_millis(delayint));
