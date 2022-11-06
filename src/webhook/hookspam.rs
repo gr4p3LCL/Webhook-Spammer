@@ -1,8 +1,6 @@
 use std::fs::File;
 use std::io;
 use std::{thread, time::Duration};
-use hyper::http;
-use reqwest::StatusCode;
 
 #[tokio::main]
 #[allow(unused_must_use)]

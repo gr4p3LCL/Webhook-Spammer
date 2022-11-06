@@ -2,14 +2,12 @@ pub mod config;
 mod misc;
 mod webhook;
 
-use colored::*;
 use config::config as conf;
 use misc::banner;
 use misc::clear;
 use misc::help;
 use misc::motd;
 use std::io::Write;
-use std::thread;
 use webhook::hookcheck;
 use webhook::hookdelete;
 use webhook::hookfile;
