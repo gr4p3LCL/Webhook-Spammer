@@ -70,7 +70,7 @@ fn main() {
                 break;
             }
 
-            _ => println!("that's not a command idiot, type `help` for a list commands"),
+            _ => println!("that's not a command, type `help` for a list commands"),
         }
     }
 }
