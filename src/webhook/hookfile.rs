@@ -10,7 +10,7 @@ pub async fn file() {
     io::stdin().read_line(&mut webhook).expect("bad");
 
     println!("\nFile path: ");
-    io::stdin().read_line(&mut path).expect("path is fucked");
+    io::stdin().read_line(&mut path).expect("path is bad");
 
     let data = fs::read(path.clone().trim()).expect("couldn't read");
 
