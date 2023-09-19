@@ -10,7 +10,7 @@ pub async fn main() {
     println!("\nWebhook:");
     io::stdin()
         .read_line(&mut webhook)
-        .expect("I'm gonna say the nword");
+        .expect("uhhhhhh");
 
     reqwest::Client::delete(&Default::default(), &webhook)
         .send()
