@@ -8,7 +8,7 @@ pub fn browser() {
     println!("\nWebhook:");
     io::stdin()
         .read_line(&mut webhook)
-        .expect("I'm gonna say the nword");
+        .expect("uhhhhhh");
 
     webbrowser::open(&webhook);
     println!("should've opened in browser")
