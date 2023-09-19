@@ -13,28 +13,28 @@ pub async fn main() {
     println!("\nWebhook:");
     io::stdin()
         .read_line(&mut webhook)
-        .expect("I'm gonna say the nword");
+        .expect("uhhhhhh");
 
     println!("\nTimes to spam:");
     io::stdin()
         .read_line(&mut times)
-        .expect("I'm gonna say the nword");
+        .expect("uhhhhhh");
     let timeint: i32 = times
         .trim()
         .parse::<i32>()
-        .expect("I'm gonna say the nword");
+        .expect("uhhhhhh");
 
     println!("\nDelay:");
     io::stdin()
         .read_line(&mut delay)
-        .expect("I'm gonna say the nword");
+        .expect("uhhhhhh");
     let delayint: u64 = delay
         .trim()
         .parse::<u64>()
-        .expect("I'm gonna say the nword");
+        .expect("uhhhhhh");
 
     let mut file = File::open("hookconfig.json").unwrap();
-    let json: serde_json::Value = serde_json::from_reader(file).expect("I'm gonna say the nword");
+    let json: serde_json::Value = serde_json::from_reader(file).expect("uhhhhhh");
 
     let client = reqwest::Client::new();
 
